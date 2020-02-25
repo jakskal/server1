@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS users(
+   id serial PRIMARY KEY,
+   name VARCHAR (50),
+   password text NOT NULL,
+   role VARCHAR(10) NOT NULL,
+   user_name VARCHAR (300) UNIQUE NOT NULL,
+   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
